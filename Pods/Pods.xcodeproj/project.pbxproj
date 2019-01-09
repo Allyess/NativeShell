@@ -1,0 +1,943 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A3A7784ECE1F90BA22414DC6C75F84C /* JSBUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C5815A3D79DA6D275A841CB7B8F58E0D /* JSBUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2235BEAA4730A1EA64D1A4D3E49E0951 /* DSCallInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C76EF8ED78A3AC941683D5B0DAF9DAA3 /* DSCallInfo.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		23C174F104D975687D72AA1B351E9413 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333CDDD2AB40ABB2D89675464339855D /* Foundation.framework */; };
+		2F078F4C0A2DD7BDEBE3885BAE4BD366 /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 95796E284DDDB21E94408351C65AB391 /* FCFileManager.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2FA5FBF00961DC3838DEBC4F36BA66C7 /* dsBridge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BBCD79EE1A54B34623BE3202F871F7 /* dsBridge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4567D1F5F15C07132C9F2064246598C4 /* dsbridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 250CDEFE88E2DA435964CA9104841BAA /* dsbridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		515570E8D6C69910DD88539B6A2A9A0E /* FCFileManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5023A940736593D8AC23F90F216FB6 /* FCFileManager-dummy.m */; };
+		52D56E6FC01D2FC80F40302498D409CB /* DWKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 021EA641A0831677BA60C67C901AA075 /* DWKWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88749D97F90BF2ED0E9143024B60A21B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA222A9370CE767AD9A86EB5E9637DB /* ImageIO.framework */; };
+		97CDB8567BA3E5E431DE18227E7E752E /* DSCallInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F889ABB7CAF640FB155F7FA749B5C5 /* DSCallInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A17CB57857D0A273AE1F7CA96E3122BF /* dsBridge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01390C44307483810FBB48639EAB82DB /* dsBridge-dummy.m */; };
+		ACF2EF951FF38FDBFA2860EEDBBE1567 /* JSBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD63D2C9F03A1AC3F32FE94D0ADDD49 /* JSBUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B2F837BDB74B49FDA66AACB65F339B99 /* DWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A303F93C77F6C0260ADC1EAA834573 /* DWKWebView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B371FB3FE3BB38B90E1E03F7BDC4047F /* Pods-justademo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 20CDCDBD9DA7CD4F41653009BB03598B /* Pods-justademo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C67AB6D3BB122D9568C34535DD55B252 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C71CD7DC85A1540633349B802C6C4C /* UIKit.framework */; };
+		D241A2A849D21C155AB746F26DD49835 /* FCFileManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BF280C8BF7B2EB3A75CF5C4DB822DEB /* FCFileManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC95563AA7E33346D3C0F03498E16171 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333CDDD2AB40ABB2D89675464339855D /* Foundation.framework */; };
+		E1F2335810C79ED7A7633E07AB8B4904 /* InternalApis.m in Sources */ = {isa = PBXBuildFile; fileRef = 264B55E2701C78FD28F1FCF7CA09F87E /* InternalApis.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E765E84D82557BAD25255C264F1ECF9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C71CD7DC85A1540633349B802C6C4C /* UIKit.framework */; };
+		E85429E52E56109C0B2E66CBA719094B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333CDDD2AB40ABB2D89675464339855D /* Foundation.framework */; };
+		F68DBE80A2DA318DA73519CC922D7345 /* InternalApis.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B17C81AB36D07863C28C61D8951E720 /* InternalApis.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7A651C28F1FC393915AB09FC1834D7E /* Pods-justademo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FABBC6ED6F95ADAD9D0C7DB3324E5DA /* Pods-justademo-dummy.m */; };
+		FFC5D2EDC74351E4A25F6E1C5D76D50C /* FCFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFD8486B4033BC592FA39040B9E43FA /* FCFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14E82AF74DAABE8A67B5019D614848AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AD3205811EFC9CCCB623798AA3229D4;
+			remoteInfo = dsBridge;
+		};
+		9FEA01FC98D6B69EB634D79012A6D094 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0135A68F20B2B5F0F40B106601BEA43C;
+			remoteInfo = FCFileManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01390C44307483810FBB48639EAB82DB /* dsBridge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "dsBridge-dummy.m"; sourceTree = "<group>"; };
+		021EA641A0831677BA60C67C901AA075 /* DWKWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DWKWebView.h; path = dsbridge/DWKWebView.h; sourceTree = "<group>"; };
+		0543A106FA0624A532A40AC7C2BE7FDA /* AlicloudHttpDNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlicloudHttpDNS.framework; path = httpdns/AlicloudHttpDNS.framework; sourceTree = "<group>"; };
+		1EFD8486B4033BC592FA39040B9E43FA /* FCFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FCFileManager.h; path = FCFileManager/FCFileManager.h; sourceTree = "<group>"; };
+		1FD63D2C9F03A1AC3F32FE94D0ADDD49 /* JSBUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSBUtil.m; path = dsbridge/JSBUtil.m; sourceTree = "<group>"; };
+		20CDCDBD9DA7CD4F41653009BB03598B /* Pods-justademo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-justademo-umbrella.h"; sourceTree = "<group>"; };
+		20E6947637ABB63F16DCD93D53B5E942 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UTDID.framework; path = utdid/UTDID.framework; sourceTree = "<group>"; };
+		250CDEFE88E2DA435964CA9104841BAA /* dsbridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dsbridge.h; path = dsbridge/dsbridge.h; sourceTree = "<group>"; };
+		251606D947F93535BE1E9956168E6A88 /* dsBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = dsBridge.framework; path = dsBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		264B55E2701C78FD28F1FCF7CA09F87E /* InternalApis.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = InternalApis.m; path = dsbridge/InternalApis.m; sourceTree = "<group>"; };
+		27C71CD7DC85A1540633349B802C6C4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		2FABBC6ED6F95ADAD9D0C7DB3324E5DA /* Pods-justademo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-justademo-dummy.m"; sourceTree = "<group>"; };
+		333CDDD2AB40ABB2D89675464339855D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		353178C43F82E8FA068F7DCA80609C75 /* Pods-justademo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-justademo.modulemap"; sourceTree = "<group>"; };
+		42FEB059EF4AB24470136D413B7945D4 /* AlicloudUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlicloudUtils.framework; path = utils/AlicloudUtils.framework; sourceTree = "<group>"; };
+		4A1494E500F97B2455F3E25DDB1A4034 /* dsBridge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = dsBridge.modulemap; sourceTree = "<group>"; };
+		4BA222A9370CE767AD9A86EB5E9637DB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		4BF280C8BF7B2EB3A75CF5C4DB822DEB /* FCFileManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FCFileManager-umbrella.h"; sourceTree = "<group>"; };
+		4EA47E1BE7F563C0061E929479269C9E /* Pods-justademo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-justademo-resources.sh"; sourceTree = "<group>"; };
+		4EBE81912213C47A3923295391F6FF12 /* Pods-justademo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-justademo-acknowledgements.plist"; sourceTree = "<group>"; };
+		562CB0439E0C83CA1E2C31702F27265C /* libssound.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libssound.a; path = singsoundSDK/libs/libssound.a; sourceTree = "<group>"; };
+		61CF4856BCE9653B757290E3E2B06F91 /* dsBridge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "dsBridge-prefix.pch"; sourceTree = "<group>"; };
+		63FD915197A8F220F0C65866F500D413 /* SingSound.Bundle */ = {isa = PBXFileReference; includeInIndex = 1; name = SingSound.Bundle; path = singsoundSDK/bundle/SingSound.Bundle; sourceTree = "<group>"; };
+		72F889ABB7CAF640FB155F7FA749B5C5 /* DSCallInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DSCallInfo.h; path = dsbridge/DSCallInfo.h; sourceTree = "<group>"; };
+		74A5926326B35B6E19CE840DECF6A6F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7986BAD826164D52D2AC9C241BB01044 /* Pods-justademo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-justademo-frameworks.sh"; sourceTree = "<group>"; };
+		81A303F93C77F6C0260ADC1EAA834573 /* DWKWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DWKWebView.m; path = dsbridge/DWKWebView.m; sourceTree = "<group>"; };
+		86BA70D3F0E4160D87F9655DD98A1034 /* FCFileManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FCFileManager-prefix.pch"; sourceTree = "<group>"; };
+		8B17C81AB36D07863C28C61D8951E720 /* InternalApis.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InternalApis.h; path = dsbridge/InternalApis.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94780A8D9A39E873FCAE013AF9BC14E1 /* Pods-justademo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-justademo.release.xcconfig"; sourceTree = "<group>"; };
+		94B415E415B890F0DD7645E6F14F429D /* Pods-justademo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-justademo.debug.xcconfig"; sourceTree = "<group>"; };
+		951D4C5B5027B11F3AA14EFAF5363FD7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95796E284DDDB21E94408351C65AB391 /* FCFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FCFileManager.m; path = FCFileManager/FCFileManager.m; sourceTree = "<group>"; };
+		999148363FE19780F16811C32E939B70 /* Pods-justademo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-justademo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D5023A940736593D8AC23F90F216FB6 /* FCFileManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FCFileManager-dummy.m"; sourceTree = "<group>"; };
+		9EAC165FCC0178513C0026E017A68180 /* FCFileManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FCFileManager.modulemap; sourceTree = "<group>"; };
+		A7F7AE1A8EB2BEF64EAB2777F27245F1 /* Pods_justademo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_justademo.framework; path = "Pods-justademo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD3396AE14106781A4375FD818C29788 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5815A3D79DA6D275A841CB7B8F58E0D /* JSBUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSBUtil.h; path = dsbridge/JSBUtil.h; sourceTree = "<group>"; };
+		C76EF8ED78A3AC941683D5B0DAF9DAA3 /* DSCallInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSCallInfo.m; path = dsbridge/DSCallInfo.m; sourceTree = "<group>"; };
+		CBF84994C448D1C3947F4400F06AAFBA /* FCFileManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FCFileManager.xcconfig; sourceTree = "<group>"; };
+		CC98249D0154A025ABAE03D4BB442C76 /* SingSound.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SingSound.framework; path = singsoundSDK/frame/SingSound.framework; sourceTree = "<group>"; };
+		DA35702FFC4F429C1C3FA89D6BEDCBA8 /* UTMini.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UTMini.framework; path = ut/UTMini.framework; sourceTree = "<group>"; };
+		E5BBCD79EE1A54B34623BE3202F871F7 /* dsBridge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "dsBridge-umbrella.h"; sourceTree = "<group>"; };
+		EBE7536AB8B4FC2F0EC80718BBA21C96 /* dsBridge.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = dsBridge.xcconfig; sourceTree = "<group>"; };
+		FF1B6C2940788E9B7A364D3DDA176DB1 /* FCFileManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FCFileManager.framework; path = FCFileManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0728923CE48E9E3FBA8435153DA6E956 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E85429E52E56109C0B2E66CBA719094B /* Foundation.framework in Frameworks */,
+				88749D97F90BF2ED0E9143024B60A21B /* ImageIO.framework in Frameworks */,
+				C67AB6D3BB122D9568C34535DD55B252 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C17EFF7CE68084F844320304C784D6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC95563AA7E33346D3C0F03498E16171 /* Foundation.framework in Frameworks */,
+				E765E84D82557BAD25255C264F1ECF9B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5DFB3E6B4D4E4870E65DC0954B15C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23C174F104D975687D72AA1B351E9413 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0738C114FBFEC02814BD8D9237F848C1 /* AlicloudHTTPDNS */ = {
+			isa = PBXGroup;
+			children = (
+				1FF2C83EA8C0E5AF52EEAC4F2D3C2860 /* Frameworks */,
+			);
+			name = AlicloudHTTPDNS;
+			path = AlicloudHTTPDNS;
+			sourceTree = "<group>";
+		};
+		0EFA1EDAA3F65E83078E7D64845BE911 /* dsBridge */ = {
+			isa = PBXGroup;
+			children = (
+				250CDEFE88E2DA435964CA9104841BAA /* dsbridge.h */,
+				72F889ABB7CAF640FB155F7FA749B5C5 /* DSCallInfo.h */,
+				C76EF8ED78A3AC941683D5B0DAF9DAA3 /* DSCallInfo.m */,
+				021EA641A0831677BA60C67C901AA075 /* DWKWebView.h */,
+				81A303F93C77F6C0260ADC1EAA834573 /* DWKWebView.m */,
+				8B17C81AB36D07863C28C61D8951E720 /* InternalApis.h */,
+				264B55E2701C78FD28F1FCF7CA09F87E /* InternalApis.m */,
+				C5815A3D79DA6D275A841CB7B8F58E0D /* JSBUtil.h */,
+				1FD63D2C9F03A1AC3F32FE94D0ADDD49 /* JSBUtil.m */,
+				BCAB93FAAFDC1819543E2A309729D513 /* Support Files */,
+			);
+			name = dsBridge;
+			path = dsBridge;
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A884D577B6F5DD181578ACF259EB421 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F1548960B0B00F95B90ED289FA47852 /* AlicloudUT */ = {
+			isa = PBXGroup;
+			children = (
+				1FB64ED7404CADC07CD8B2753B9C74ED /* Frameworks */,
+			);
+			name = AlicloudUT;
+			path = AlicloudUT;
+			sourceTree = "<group>";
+		};
+		1FB64ED7404CADC07CD8B2753B9C74ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA35702FFC4F429C1C3FA89D6BEDCBA8 /* UTMini.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1FF2C83EA8C0E5AF52EEAC4F2D3C2860 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0543A106FA0624A532A40AC7C2BE7FDA /* AlicloudHttpDNS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E23095B52ACF257246A9D754227F43D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				562CB0439E0C83CA1E2C31702F27265C /* libssound.a */,
+				CC98249D0154A025ABAE03D4BB442C76 /* SingSound.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		36B3255F2AA2C517E18B0889F6E510F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42FEB059EF4AB24470136D413B7945D4 /* AlicloudUtils.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A3513C43AD15C75B948225F3C75838A /* AlicloudUtils */ = {
+			isa = PBXGroup;
+			children = (
+				36B3255F2AA2C517E18B0889F6E510F9 /* Frameworks */,
+			);
+			name = AlicloudUtils;
+			path = AlicloudUtils;
+			sourceTree = "<group>";
+		};
+		5200481415E839D7096DABF102167AD1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EAC165FCC0178513C0026E017A68180 /* FCFileManager.modulemap */,
+				CBF84994C448D1C3947F4400F06AAFBA /* FCFileManager.xcconfig */,
+				9D5023A940736593D8AC23F90F216FB6 /* FCFileManager-dummy.m */,
+				86BA70D3F0E4160D87F9655DD98A1034 /* FCFileManager-prefix.pch */,
+				4BF280C8BF7B2EB3A75CF5C4DB822DEB /* FCFileManager-umbrella.h */,
+				74A5926326B35B6E19CE840DECF6A6F1 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FCFileManager";
+			sourceTree = "<group>";
+		};
+		5A884D577B6F5DD181578ACF259EB421 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				333CDDD2AB40ABB2D89675464339855D /* Foundation.framework */,
+				4BA222A9370CE767AD9A86EB5E9637DB /* ImageIO.framework */,
+				27C71CD7DC85A1540633349B802C6C4C /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		77D85260A7BFEF8011E555D2ACD979F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20E6947637ABB63F16DCD93D53B5E942 /* UTDID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		796533EB43696E2914373BA7A15A9DC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0738C114FBFEC02814BD8D9237F848C1 /* AlicloudHTTPDNS */,
+				1F1548960B0B00F95B90ED289FA47852 /* AlicloudUT */,
+				CC6B07232E1644299DC73D119E4BA130 /* AlicloudUTDID */,
+				4A3513C43AD15C75B948225F3C75838A /* AlicloudUtils */,
+				0EFA1EDAA3F65E83078E7D64845BE911 /* dsBridge */,
+				7C92560870B9860D09B6A0B258DFAE14 /* FCFileManager */,
+				C41C44D89F75B49B5E6663B9666259DE /* SingSoundSDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7C92560870B9860D09B6A0B258DFAE14 /* FCFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				1EFD8486B4033BC592FA39040B9E43FA /* FCFileManager.h */,
+				95796E284DDDB21E94408351C65AB391 /* FCFileManager.m */,
+				5200481415E839D7096DABF102167AD1 /* Support Files */,
+			);
+			name = FCFileManager;
+			path = FCFileManager;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				796533EB43696E2914373BA7A15A9DC5 /* Pods */,
+				B0B17D4EAEB7B097602D6407371FD242 /* Products */,
+				F2CB48DDC7D0004E3B0A7D1BFB79DD16 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B0B17D4EAEB7B097602D6407371FD242 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				251606D947F93535BE1E9956168E6A88 /* dsBridge.framework */,
+				FF1B6C2940788E9B7A364D3DDA176DB1 /* FCFileManager.framework */,
+				A7F7AE1A8EB2BEF64EAB2777F27245F1 /* Pods_justademo.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCAB93FAAFDC1819543E2A309729D513 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A1494E500F97B2455F3E25DDB1A4034 /* dsBridge.modulemap */,
+				EBE7536AB8B4FC2F0EC80718BBA21C96 /* dsBridge.xcconfig */,
+				01390C44307483810FBB48639EAB82DB /* dsBridge-dummy.m */,
+				61CF4856BCE9653B757290E3E2B06F91 /* dsBridge-prefix.pch */,
+				E5BBCD79EE1A54B34623BE3202F871F7 /* dsBridge-umbrella.h */,
+				951D4C5B5027B11F3AA14EFAF5363FD7 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/dsBridge";
+			sourceTree = "<group>";
+		};
+		C41C44D89F75B49B5E6663B9666259DE /* SingSoundSDK */ = {
+			isa = PBXGroup;
+			children = (
+				2E23095B52ACF257246A9D754227F43D /* Frameworks */,
+				E62B5061483C2E79F9BFD60923214D72 /* Resources */,
+			);
+			name = SingSoundSDK;
+			path = SingSoundSDK;
+			sourceTree = "<group>";
+		};
+		CC6B07232E1644299DC73D119E4BA130 /* AlicloudUTDID */ = {
+			isa = PBXGroup;
+			children = (
+				77D85260A7BFEF8011E555D2ACD979F2 /* Frameworks */,
+			);
+			name = AlicloudUTDID;
+			path = AlicloudUTDID;
+			sourceTree = "<group>";
+		};
+		E4BAA4039981B7347827A8038F8F1A99 /* Pods-justademo */ = {
+			isa = PBXGroup;
+			children = (
+				BD3396AE14106781A4375FD818C29788 /* Info.plist */,
+				353178C43F82E8FA068F7DCA80609C75 /* Pods-justademo.modulemap */,
+				999148363FE19780F16811C32E939B70 /* Pods-justademo-acknowledgements.markdown */,
+				4EBE81912213C47A3923295391F6FF12 /* Pods-justademo-acknowledgements.plist */,
+				2FABBC6ED6F95ADAD9D0C7DB3324E5DA /* Pods-justademo-dummy.m */,
+				7986BAD826164D52D2AC9C241BB01044 /* Pods-justademo-frameworks.sh */,
+				4EA47E1BE7F563C0061E929479269C9E /* Pods-justademo-resources.sh */,
+				20CDCDBD9DA7CD4F41653009BB03598B /* Pods-justademo-umbrella.h */,
+				94B415E415B890F0DD7645E6F14F429D /* Pods-justademo.debug.xcconfig */,
+				94780A8D9A39E873FCAE013AF9BC14E1 /* Pods-justademo.release.xcconfig */,
+			);
+			name = "Pods-justademo";
+			path = "Target Support Files/Pods-justademo";
+			sourceTree = "<group>";
+		};
+		E62B5061483C2E79F9BFD60923214D72 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63FD915197A8F220F0C65866F500D413 /* SingSound.Bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F2CB48DDC7D0004E3B0A7D1BFB79DD16 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4BAA4039981B7347827A8038F8F1A99 /* Pods-justademo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		516F5F44E70435AF9449AF309B50BA15 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B371FB3FE3BB38B90E1E03F7BDC4047F /* Pods-justademo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B4EBBC09CE6C81B86ECC7B360F6F381 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FA5FBF00961DC3838DEBC4F36BA66C7 /* dsBridge-umbrella.h in Headers */,
+				4567D1F5F15C07132C9F2064246598C4 /* dsbridge.h in Headers */,
+				97CDB8567BA3E5E431DE18227E7E752E /* DSCallInfo.h in Headers */,
+				52D56E6FC01D2FC80F40302498D409CB /* DWKWebView.h in Headers */,
+				F68DBE80A2DA318DA73519CC922D7345 /* InternalApis.h in Headers */,
+				0A3A7784ECE1F90BA22414DC6C75F84C /* JSBUtil.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BC539B1560559DD7E751CF0EE842EC8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D241A2A849D21C155AB746F26DD49835 /* FCFileManager-umbrella.h in Headers */,
+				FFC5D2EDC74351E4A25F6E1C5D76D50C /* FCFileManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0135A68F20B2B5F0F40B106601BEA43C /* FCFileManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB1664A5909CF8CB71BD9E8C6C35EBC9 /* Build configuration list for PBXNativeTarget "FCFileManager" */;
+			buildPhases = (
+				9BC539B1560559DD7E751CF0EE842EC8 /* Headers */,
+				EA72900B347400AD1410D10CECEF5298 /* Sources */,
+				0728923CE48E9E3FBA8435153DA6E956 /* Frameworks */,
+				6B9DB29C3EA7B4AB2792047EEC0A1D74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FCFileManager;
+			productName = FCFileManager;
+			productReference = FF1B6C2940788E9B7A364D3DDA176DB1 /* FCFileManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1AD3205811EFC9CCCB623798AA3229D4 /* dsBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FF09F8F7EE6B49723F1A2D1CEF75588 /* Build configuration list for PBXNativeTarget "dsBridge" */;
+			buildPhases = (
+				9B4EBBC09CE6C81B86ECC7B360F6F381 /* Headers */,
+				9295D15EFB7C97E2FC10145B796B9DFC /* Sources */,
+				5C17EFF7CE68084F844320304C784D6B /* Frameworks */,
+				375EC0555EAB0FACEF49137C6A908A3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dsBridge;
+			productName = dsBridge;
+			productReference = 251606D947F93535BE1E9956168E6A88 /* dsBridge.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1CF5E904C89A72F8B7C8E9F4B882F0A2 /* Pods-justademo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3E123D6C6E059F31353C9A47FE8FD02 /* Build configuration list for PBXNativeTarget "Pods-justademo" */;
+			buildPhases = (
+				516F5F44E70435AF9449AF309B50BA15 /* Headers */,
+				8727939A46D4E98C2E09E203D5E41FB2 /* Sources */,
+				AF5DFB3E6B4D4E4870E65DC0954B15C6 /* Frameworks */,
+				9A14559C22B0C0B0A1AD0AD9837CAF77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1541A0A4677793DA78FAA28961FAC299 /* PBXTargetDependency */,
+				6EF320493ED353D557A4A8674F6646DB /* PBXTargetDependency */,
+			);
+			name = "Pods-justademo";
+			productName = "Pods-justademo";
+			productReference = A7F7AE1A8EB2BEF64EAB2777F27245F1 /* Pods_justademo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B0B17D4EAEB7B097602D6407371FD242 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AD3205811EFC9CCCB623798AA3229D4 /* dsBridge */,
+				0135A68F20B2B5F0F40B106601BEA43C /* FCFileManager */,
+				1CF5E904C89A72F8B7C8E9F4B882F0A2 /* Pods-justademo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		375EC0555EAB0FACEF49137C6A908A3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B9DB29C3EA7B4AB2792047EEC0A1D74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A14559C22B0C0B0A1AD0AD9837CAF77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8727939A46D4E98C2E09E203D5E41FB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A651C28F1FC393915AB09FC1834D7E /* Pods-justademo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9295D15EFB7C97E2FC10145B796B9DFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A17CB57857D0A273AE1F7CA96E3122BF /* dsBridge-dummy.m in Sources */,
+				2235BEAA4730A1EA64D1A4D3E49E0951 /* DSCallInfo.m in Sources */,
+				B2F837BDB74B49FDA66AACB65F339B99 /* DWKWebView.m in Sources */,
+				E1F2335810C79ED7A7633E07AB8B4904 /* InternalApis.m in Sources */,
+				ACF2EF951FF38FDBFA2860EEDBBE1567 /* JSBUtil.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA72900B347400AD1410D10CECEF5298 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				515570E8D6C69910DD88539B6A2A9A0E /* FCFileManager-dummy.m in Sources */,
+				2F078F4C0A2DD7BDEBE3885BAE4BD366 /* FCFileManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1541A0A4677793DA78FAA28961FAC299 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FCFileManager;
+			target = 0135A68F20B2B5F0F40B106601BEA43C /* FCFileManager */;
+			targetProxy = 9FEA01FC98D6B69EB634D79012A6D094 /* PBXContainerItemProxy */;
+		};
+		6EF320493ED353D557A4A8674F6646DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = dsBridge;
+			target = 1AD3205811EFC9CCCB623798AA3229D4 /* dsBridge */;
+			targetProxy = 14E82AF74DAABE8A67B5019D614848AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		169796CAB02777CDBDC9BC5014FF8AF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBE7536AB8B4FC2F0EC80718BBA21C96 /* dsBridge.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/dsBridge/dsBridge-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/dsBridge/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/dsBridge/dsBridge.modulemap";
+				PRODUCT_MODULE_NAME = dsBridge;
+				PRODUCT_NAME = dsBridge;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3ACBA8B75F2110F0565D2E5B41EB80CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBF84994C448D1C3947F4400F06AAFBA /* FCFileManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FCFileManager/FCFileManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FCFileManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FCFileManager/FCFileManager.modulemap";
+				PRODUCT_MODULE_NAME = FCFileManager;
+				PRODUCT_NAME = FCFileManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		85B95B1234E227C814CCC2C7902D0916 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		980B01C82A0161C4A70A8F5F5AB87BA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBF84994C448D1C3947F4400F06AAFBA /* FCFileManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FCFileManager/FCFileManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FCFileManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FCFileManager/FCFileManager.modulemap";
+				PRODUCT_MODULE_NAME = FCFileManager;
+				PRODUCT_NAME = FCFileManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A73625DEBD810B78234FA1958C191C8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B30E30DD0C3FDA37994162E72C9C1838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBE7536AB8B4FC2F0EC80718BBA21C96 /* dsBridge.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/dsBridge/dsBridge-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/dsBridge/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/dsBridge/dsBridge.modulemap";
+				PRODUCT_MODULE_NAME = dsBridge;
+				PRODUCT_NAME = dsBridge;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DADE9C978A0E253C9A874202E35684E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94780A8D9A39E873FCAE013AF9BC14E1 /* Pods-justademo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-justademo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-justademo/Pods-justademo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FACBF470181FDC3F6D9425E6B468ABDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94B415E415B890F0DD7645E6F14F429D /* Pods-justademo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-justademo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-justademo/Pods-justademo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A73625DEBD810B78234FA1958C191C8C /* Debug */,
+				85B95B1234E227C814CCC2C7902D0916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FF09F8F7EE6B49723F1A2D1CEF75588 /* Build configuration list for PBXNativeTarget "dsBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B30E30DD0C3FDA37994162E72C9C1838 /* Debug */,
+				169796CAB02777CDBDC9BC5014FF8AF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB1664A5909CF8CB71BD9E8C6C35EBC9 /* Build configuration list for PBXNativeTarget "FCFileManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ACBA8B75F2110F0565D2E5B41EB80CF /* Debug */,
+				980B01C82A0161C4A70A8F5F5AB87BA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3E123D6C6E059F31353C9A47FE8FD02 /* Build configuration list for PBXNativeTarget "Pods-justademo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACBF470181FDC3F6D9425E6B468ABDB /* Debug */,
+				DADE9C978A0E253C9A874202E35684E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

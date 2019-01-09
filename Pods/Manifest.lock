@@ -1,0 +1,43 @@
+PODS:
+  - AlicloudHTTPDNS (1.6.20):
+    - AlicloudUT
+    - AlicloudUtils
+  - AlicloudUT (5.2.0.5):
+    - AlicloudUTDID
+  - AlicloudUTDID (1.1.0.19)
+  - AlicloudUtils (1.3.6):
+    - AlicloudUTDID
+  - dsBridge (3.0.6)
+  - FCFileManager (1.0.20)
+  - SingSoundSDK (0.5.1)
+
+DEPENDENCIES:
+  - AlicloudHTTPDNS (~> 1.6.11)
+  - dsBridge
+  - FCFileManager
+  - SingSoundSDK
+
+SPEC REPOS:
+  https://github.com/aliyun/aliyun-specs.git:
+    - AlicloudHTTPDNS
+    - AlicloudUT
+    - AlicloudUTDID
+    - AlicloudUtils
+  https://github.com/cocoapods/specs.git:
+    - dsBridge
+    - FCFileManager
+  https://pt.singsound.com:10081/singsound-public/SingSoundSDKCocoaPodRepo.git:
+    - SingSoundSDK
+
+SPEC CHECKSUMS:
+  AlicloudHTTPDNS: c1a7e0d17f68185a738d1a51ccefd7059037212b
+  AlicloudUT: 1b52965b97c5fc0b630901ce184391fbe1ef8479
+  AlicloudUTDID: 14b582e41b39bc66e5a3420b61dafd0567ef4603
+  AlicloudUtils: 8ec4614eb89da8e8d6f338b02fb2150d07fad4a9
+  dsBridge: 48b62ee8a411ad601a88d6f6c8cf6cb634b206b7
+  FCFileManager: e0f73316e6aa2eb04d2ff4caa75fe7df1ae44270
+  SingSoundSDK: f1c7c572e89dd9c6924c32f645a9ea14caaec15f
+
+PODFILE CHECKSUM: d2ae44970f5c29eabb0c4c05a0becc52fe1f8db6
+
+COCOAPODS: 1.5.3

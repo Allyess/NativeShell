@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cmn-Hans">
+    <meta charset="UTF-8">
+    <title>DSBridge Test</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,user-scalable=no"/>
+    <!--require dsbridge init js-->
+    <script src="https://cdn.jsdelivr.net/npm/dsbridge/dist/dsbridge.js"> </script>
+</head>
+<style>
+    .btn {
+        text-align: center;
+        background: #eee;
+        color: #000;
+        padding: 20px;
+        margin: 30px;
+        font-size: 24px;
+        border-radius: 4px;
+        box-shadow: 4px 2px 10px #999;
+    }
+
+    .btn:active {
+        opacity: .7;
+        box-shadow: 4px 2px 10px #555;
+    }
+
+
+
+</style>
+<body>
+    <div class="btn" onclick="reinit()">reinit</div>
+    <div class="btn" onclick="stopRecord()">stopRecord</div>
+    <div class="btn" onclick="startRecord()">startRecord</div>
+    <div class="btn" onclick="startPlayRecord()">startPlayRecord</div>
+    <div class="btn" onclick="stopPlayRecord()">stopPlayRecord</div>
+    <div class="btn" onclick="getRecordPath()">getRecordPath</div>
+<div class="btn" onclick="openURL()">openURL</div>
+<div class="btn" onclick="callPhone()">callPhone</div>
+<div class="btn" onclick="stopRecord()">stopRecord</div>
+<div class="btn" onclick="startRecord()">startRecord</div>
+<div class="btn" onclick="openCamare()">openCamare</div>
+<div class="btn" onclick="openGallery()">openGallery</div>
+<div class="btn" onclick="setNativeCookie()">setNativeCookie</div>
+<div class="btn" onclick="getNativeCookie()">getNativeCookie</div>
+<div class="btn" onclick="getNativeCookies()">getNativeCookies</div>
+<div class="btn" onclick="setNativePersistence()">setNativePersistence</div>
+<div class="btn" onclick="getNativePersistence()">getNativePersistence</div>
+<div class="btn" onclick="pushIndex()">pushIndex</div>
+<div class="btn" onclick="pushIndex()">pushIndex</div>
+<div class="btn" onclick="dissmissCurrentVc()">dissmissCurrentVc</div>
+<div class="btn" onclick="callSyn()">Synchronous call</div>
+<div class="btn" onclick="callAsyn()">Asynchronous call</div>
+<div class="btn" onclick="callSynSwift()">Syn call (swift)</div>
+<div class="btn" onclick="callAsynSwift()">Async call(swift)</div>
+<div class="btn" onclick="callNoArgSyn()">Sync call without argument</div>
+<div class="btn" onclick="callNoArgAsyn()">Async call without argument</div>
+<div class="btn" onclick="echoSyn()">echo.syn</div>
+<div class="btn" onclick="echoAsyn()">echo.asyn</div>
+<div class="btn" onclick="callAsyn_()">Stress test，2K times consecutive asynchronous API calls</div>
+<div class="btn" onclick="callNever()">Never call because without @JavascriptInterface
+    annotation<br/>( This test is
+    just for Android ,should be ignored in IOS )
+</div>
+<div class="btn" onclick="callProgress()">call progress <span id='progress'></span></div>
+<div class="btn" onclick="hasNativeMethod('xx')">hasNativeMethod("xx")</div>
+<div class="btn" onclick="hasNativeMethod('testSyn')">hasNativeMethod("testSyn")</div>
+
+<script>
+    var xxx = "123";
+    function reinit() {
+        console.log(dsBridge.call("reinit", {"appKey":"t410","secretKey":"1a16f31f2611bf32fb7b3fc38f5b2c73"}));
+    }
+
+    function stopRecord() {
+        console.log(dsBridge.call("stopRecord"));
+
+    }
+
+    function startRecord() {
+        console.log(dsBridge.call("startRecord", {"oralType":"8","openFeed":"1","oralContent":"中国人民银行"}));
+    }
+
+    function startPlayRecord() {
+        console.log(dsBridge.call("startPlayRecord", {"tokenId":xxx,"volume":"0.9"}));
+    }
+
+    function stopPlayRecord() {
+    console.log(dsBridge.call("stopPlayRecord"));
+    }
+
+
+    function getRecordPath() {
+        console.log(dsBridge.call("getRecordPath", {"tokenId":xxx}));
+    }
+    
+    function openURL() {
+        dsBridge.call("openURL", {"Url":"https://www.baidu.com"});
+    }
+
+
+    function callPhone() {
+        dsBridge.call("callPhone", {"phoneNum":"10086"});
+    }
+
+    function openCamare() {
+        dsBridge.call("openCamare", {"allowsEditing":"1","compressScale":"0.5","compressQuality":"0.5","imgName":"123"}, function (v) {
+                      console.log(v)
+                      });
+    }
+    
+    function openGallery() {
+        dsBridge.call("openGallery", {"allowsEditing":"1","compressScale":"0.5","compressQuality":"0.5","imgName":"123"}, function (v) {
+                      console.log(v)
+                      });
+    }
+    
+    function setNativeCookie() {
+        dsBridge.call("setNativeCookie", {"key":"setNativeCookie","value":"654321"});
+    }
+
+    function getNativeCookie() {
+        alert( dsBridge.call("getNativeCookie", "setNativeCookie"));
+    }
+
+    function getNativeCookies() {
+        alert(dsBridge.call("getNativeCookies", "getNativePersistence"));
+    }
+    
+    function setNativePersistence() {
+        dsBridge.call("setNativePersistence", {"key":"getNativePersistence","value":"123456"});
+    }
+    
+    function getNativePersistence() {
+       alert( dsBridge.call("getNativePersistence", "getNativePersistence"));
+    }
+
+    function pushIndex() {
+        dsBridge.call("pushIndex", "asd");
+    }
+
+  function dissmissCurrentVc() {
+      dsBridge.call("dissmissCurrentVc", "asd");
+  }
+
+
+    function callSyn() {
+      alert(dsBridge.call("testSyn", "Hello"))
+    }
+
+    function callAsyn() {
+        dsBridge.call("testAsyn","hello", function (v) {
+            alert(v)
+        })
+    }
+
+
+function callSynSwift() {
+    alert(dsBridge.call("swift.testSyn", "hello"))
+}
+
+function callAsynSwift() {
+    dsBridge.call("swift.testAsyn","hello", function (v) {
+                  alert(v)
+                  })
+}
+
+    function callAsyn_() {
+        for (var i = 0; i < 2000; i++) {
+            dsBridge.call("testAsyn",  "js+" + i, function (v) {
+                if (v == "js+1999 [ asyn call]") {
+                    alert("All tasks completed!")
+                }
+            })
+        }
+    }
+
+    function callNoArgSyn() {
+        alert(dsBridge.call("testNoArgSyn"));
+    }
+
+    function callNoArgAsyn() {
+        dsBridge.call("testNoArgAsyn", function (v) {
+            alert(v)
+        });
+    }
+
+    function callNever() {
+        alert(dsBridge.call("testNever", {msg: "testSyn"}))
+    }
+
+    function echoSyn() {
+        // call function with namespace
+        var ret=dsBridge.call("echo.syn",{msg:" I am echoSyn call", tag:1});
+        alert(JSON.stringify(ret))
+    }
+
+    function echoAsyn() {
+        // call function with namespace
+        dsBridge.call("echo.asyn",{msg:" I am echoAsyn call",tag:2},function (ret) {
+            alert(JSON.stringify(ret));
+        })
+    }
+
+    function callProgress() {
+        dsBridge.call("callProgress", function (value) {
+            if(value==0) value="";
+            document.getElementById("progress").innerText = value
+        })
+    }
+
+    function hasNativeMethod(name) {
+        alert(dsBridge.hasNativeMethod(name))
+    }
+
+
+    // 添加自定义回调方法
+    // OralEvaluatingManagerDelegate 回调
+    dsBridge.register('oralEvaluatingInitSuccess', function () {
+                      console.log('oralEvaluatingInitSuccess')
+                      return ;
+                      })
+    dsBridge.register('oralEvaluatingDidStart', function (recordId) {
+                      console.log('oralEvaluatingDidStart')
+                      return ;
+                      })
+
+    dsBridge.register('oralEvaluatingDidStop', function (recordId) {
+                      console.log('oralEvaluatingDidStop')
+                      return ;
+                      })
+    dsBridge.register('oralEvaluatingDidEndWithResult', function (result,isLast) {
+                      console.log('oralEvaluatingDidEndWithResult')
+                      console.log(result)
+                      console.log(isLast)
+
+                      return ;
+                      })
+    dsBridge.register('oralEvaluatingRealTimeCallBack', function (result) {
+                      console.log('oralEvaluatingRealTimeCallBack')
+                      console.log(result)
+                      return ;
+                      })
+    dsBridge.register('oralEvaluatingDidEndError', function (error) {
+                      console.log('oralEvaluatingDidEndError')
+                      console.log(error)
+                      return ;
+                      })
+    dsBridge.register('oralEvaluatingDidUpdateVolume', function (volume) {
+                      console.log('oralEvaluatingDidUpdateVolume')
+                      console.log(volume)
+                      return ;
+                      })
+    dsBridge.register('oralEvaluatingDidVADFrontTimeOut', function (recordId) {
+                      console.log('oralEvaluatingDidVADFrontTimeOut')
+                      return ;
+                      })
+    dsBridge.register('oralEvaluatingDidVADBackTimeOut', function (recordId) {
+                      console.log('oralEvaluatingDidVADBackTimeOut')
+                      return ;
+                      })
+    dsBridge.register('oralEvaluatingDidRecorderWillTimeOut', function (recordId) {
+                      console.log('oralEvaluatingDidRecorderWillTimeOut')
+                      return ;
+                      })
+    dsBridge.register('oralEvaluatingReturnRecordId', function (recordId) {
+                      console.log(xxx)
+                      xxx = recordId; console.log('oralEvaluatingReturnRecordId')
+                      console.log(xxx)
+                      console.log(recordId)
+
+
+                      return ;
+                      })
+ 
+// 生命周期
+    dsBridge.register('NATIVE_APP_GO_BACKGROUND', function () {
+                      alert('NATIVE_APP_GO_BACKGROUND')
+                      return ;
+                      })
+    dsBridge.register('NATIVE_APP_GO_FOREGROUND', function () {
+                      alert('NATIVE_APP_GO_FOREGROUND')
+                      return ;
+                      })
+    dsBridge.register('NATIVE_VIEW_DID_DISAPPEAR', function () {
+                      console.log('NATIVE_VIEW_DID_DISAPPEAR')
+
+                      return ;
+                      })
+    dsBridge.register('NATIVE_VIEW_DID_APPEAR', function () {
+                      alert('NATIVE_VIEW_DID_APPEAR')
+                      return ;
+                      })
+// 返回按钮事件
+    dsBridge.register('DDWEBVIEW_NAV_BACK', function () {
+                      alert('DDWEBVIEW_NAV_BACK')
+                      return false;
+                      })
+// test functions
+    dsBridge.register('addValue', function (r, l) {
+        return r + l;
+    })
+
+    dsBridge.registerAsyn('append', function (arg1, arg2, arg3, responseCallback) {
+        responseCallback(arg1 + " " + arg2 + " " + arg3);
+    })
+
+    dsBridge.registerAsyn('startTimer', function (responseCallback) {
+        var t = 0;
+        var timer = setInterval(function () {
+            if (t == 5) {
+                responseCallback(t)
+                clearInterval(timer)
+            } else {
+                // if the 2nd argument is false,  the java callback handler will be not removed!
+                responseCallback(t++, false)
+            }
+        }, 1000)
+
+    })
+
+    // namespace test for syn functions
+    dsBridge.register("syn", {
+        tag: "syn",
+        addValue:function (r,l) {
+            return r+l;
+        },
+        getInfo: function () {
+            return {tag: this.tag, value:8}
+        }
+    })
+
+    // namespace test for asyn functions
+    dsBridge.registerAsyn("asyn", {
+        tag: "asyn",
+        addValue:function (r,l, responseCallback) {
+            responseCallback(r+l);
+        },
+        getInfo: function (responseCallback) {
+            responseCallback({tag: this.tag, value:8})
+        }
+    })
+
+</script>
+</body>
+</html>

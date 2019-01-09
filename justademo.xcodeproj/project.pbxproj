@@ -1,0 +1,746 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8423097C21E354DA008156DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8423097B21E354DA008156DD /* AppDelegate.m */; };
+		8423097F21E354DA008156DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8423097E21E354DA008156DD /* ViewController.m */; };
+		8423098221E354DA008156DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8423098021E354DA008156DD /* Main.storyboard */; };
+		8423098421E354DC008156DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8423098321E354DC008156DD /* Assets.xcassets */; };
+		8423098721E354DC008156DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8423098521E354DC008156DD /* LaunchScreen.storyboard */; };
+		8423098A21E354DC008156DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8423098921E354DC008156DD /* main.m */; };
+		8423099421E354DD008156DD /* justademoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8423099321E354DD008156DD /* justademoTests.m */; };
+		8423099F21E354DD008156DD /* justademoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8423099E21E354DD008156DD /* justademoUITests.m */; };
+		842309AE21E3568C008156DD /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842309AD21E3568C008156DD /* WebViewController.m */; };
+		842309B121E362E3008156DD /* JsApiTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 842309B021E362E3008156DD /* JsApiTest.m */; };
+		842309B621E3633E008156DD /* JsApiTestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842309B321E3633B008156DD /* JsApiTestSwift.swift */; };
+		842309B721E3633E008156DD /* JsEchoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 842309B521E3633D008156DD /* JsEchoApi.m */; };
+		842309B921E3637D008156DD /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 842309B821E3637D008156DD /* test.html */; };
+		842309C121E37058008156DD /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 842309C021E37058008156DD /* UIColor+Addition.m */; };
+		842309CF21E454E8008156DD /* UIImage+Compress.m in Sources */ = {isa = PBXBuildFile; fileRef = 842309CE21E454E8008156DD /* UIImage+Compress.m */; };
+		842309D221E4551C008156DD /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842309D021E4551B008156DD /* UIImage+Rotate.m */; };
+		842309D521E4AF1E008156DD /* ServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 842309D421E4AF1D008156DD /* ServiceManager.m */; };
+		AED326A11E8C8B289A50DB3C /* Pods_justademo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13DDCDFC73EDAFB84DE8CDED /* Pods_justademo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8423099021E354DD008156DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8423096F21E354D9008156DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8423097621E354DA008156DD;
+			remoteInfo = justademo;
+		};
+		8423099B21E354DD008156DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8423096F21E354D9008156DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8423097621E354DA008156DD;
+			remoteInfo = justademo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13DDCDFC73EDAFB84DE8CDED /* Pods_justademo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_justademo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		618E04FEBCB8F12DE6EF36D4 /* Pods-justademo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-justademo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-justademo/Pods-justademo.debug.xcconfig"; sourceTree = "<group>"; };
+		8423097721E354DA008156DD /* justademo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = justademo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8423097A21E354DA008156DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8423097B21E354DA008156DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8423097D21E354DA008156DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8423097E21E354DA008156DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8423098121E354DA008156DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8423098321E354DC008156DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8423098621E354DC008156DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8423098821E354DC008156DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8423098921E354DC008156DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8423098F21E354DD008156DD /* justademoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = justademoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8423099321E354DD008156DD /* justademoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = justademoTests.m; sourceTree = "<group>"; };
+		8423099521E354DD008156DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8423099A21E354DD008156DD /* justademoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = justademoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8423099E21E354DD008156DD /* justademoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = justademoUITests.m; sourceTree = "<group>"; };
+		842309A021E354DD008156DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		842309AC21E3568C008156DD /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		842309AD21E3568C008156DD /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		842309AF21E362E2008156DD /* JsApiTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsApiTest.h; sourceTree = "<group>"; };
+		842309B021E362E3008156DD /* JsApiTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsApiTest.m; sourceTree = "<group>"; };
+		842309B221E36338008156DD /* justademo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "justademo-Bridging-Header.h"; sourceTree = "<group>"; };
+		842309B321E3633B008156DD /* JsApiTestSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsApiTestSwift.swift; sourceTree = "<group>"; };
+		842309B421E3633B008156DD /* JsEchoApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsEchoApi.h; sourceTree = "<group>"; };
+		842309B521E3633D008156DD /* JsEchoApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsEchoApi.m; sourceTree = "<group>"; };
+		842309B821E3637D008156DD /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		842309BF21E37057008156DD /* UIColor+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Addition.h"; sourceTree = "<group>"; };
+		842309C021E37058008156DD /* UIColor+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Addition.m"; sourceTree = "<group>"; };
+		842309CD21E454E8008156DD /* UIImage+Compress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Compress.h"; sourceTree = "<group>"; };
+		842309CE21E454E8008156DD /* UIImage+Compress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Compress.m"; sourceTree = "<group>"; };
+		842309D021E4551B008156DD /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
+		842309D121E4551B008156DD /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
+		842309D321E4AF1D008156DD /* ServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceManager.h; sourceTree = "<group>"; };
+		842309D421E4AF1D008156DD /* ServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceManager.m; sourceTree = "<group>"; };
+		C1F8F1D1F40B4E17EFCD5974 /* Pods-justademo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-justademo.release.xcconfig"; path = "Pods/Target Support Files/Pods-justademo/Pods-justademo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8423097421E354DA008156DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED326A11E8C8B289A50DB3C /* Pods_justademo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8423098C21E354DD008156DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8423099721E354DD008156DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07D325DD90E74A8DF0E86EFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				618E04FEBCB8F12DE6EF36D4 /* Pods-justademo.debug.xcconfig */,
+				C1F8F1D1F40B4E17EFCD5974 /* Pods-justademo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2E72583B6AD1396C331D20B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13DDCDFC73EDAFB84DE8CDED /* Pods_justademo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8423096E21E354D9008156DD = {
+			isa = PBXGroup;
+			children = (
+				8423097921E354DA008156DD /* justademo */,
+				8423099221E354DD008156DD /* justademoTests */,
+				8423099D21E354DD008156DD /* justademoUITests */,
+				8423097821E354DA008156DD /* Products */,
+				07D325DD90E74A8DF0E86EFF /* Pods */,
+				2E72583B6AD1396C331D20B3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8423097821E354DA008156DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8423097721E354DA008156DD /* justademo.app */,
+				8423098F21E354DD008156DD /* justademoTests.xctest */,
+				8423099A21E354DD008156DD /* justademoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8423097921E354DA008156DD /* justademo */ = {
+			isa = PBXGroup;
+			children = (
+				8423097A21E354DA008156DD /* AppDelegate.h */,
+				8423097B21E354DA008156DD /* AppDelegate.m */,
+				842309D321E4AF1D008156DD /* ServiceManager.h */,
+				842309D421E4AF1D008156DD /* ServiceManager.m */,
+				8423097D21E354DA008156DD /* ViewController.h */,
+				8423097E21E354DA008156DD /* ViewController.m */,
+				842309AC21E3568C008156DD /* WebViewController.h */,
+				842309AD21E3568C008156DD /* WebViewController.m */,
+				842309AF21E362E2008156DD /* JsApiTest.h */,
+				842309B021E362E3008156DD /* JsApiTest.m */,
+				842309B321E3633B008156DD /* JsApiTestSwift.swift */,
+				842309B421E3633B008156DD /* JsEchoApi.h */,
+				842309B521E3633D008156DD /* JsEchoApi.m */,
+				8423098021E354DA008156DD /* Main.storyboard */,
+				8423098321E354DC008156DD /* Assets.xcassets */,
+				8423098521E354DC008156DD /* LaunchScreen.storyboard */,
+				8423098821E354DC008156DD /* Info.plist */,
+				8423098921E354DC008156DD /* main.m */,
+				842309B221E36338008156DD /* justademo-Bridging-Header.h */,
+				842309B821E3637D008156DD /* test.html */,
+				842309BF21E37057008156DD /* UIColor+Addition.h */,
+				842309C021E37058008156DD /* UIColor+Addition.m */,
+				842309CD21E454E8008156DD /* UIImage+Compress.h */,
+				842309CE21E454E8008156DD /* UIImage+Compress.m */,
+				842309D121E4551B008156DD /* UIImage+Rotate.h */,
+				842309D021E4551B008156DD /* UIImage+Rotate.m */,
+			);
+			path = justademo;
+			sourceTree = "<group>";
+		};
+		8423099221E354DD008156DD /* justademoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8423099321E354DD008156DD /* justademoTests.m */,
+				8423099521E354DD008156DD /* Info.plist */,
+			);
+			path = justademoTests;
+			sourceTree = "<group>";
+		};
+		8423099D21E354DD008156DD /* justademoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8423099E21E354DD008156DD /* justademoUITests.m */,
+				842309A021E354DD008156DD /* Info.plist */,
+			);
+			path = justademoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8423097621E354DA008156DD /* justademo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842309A321E354DD008156DD /* Build configuration list for PBXNativeTarget "justademo" */;
+			buildPhases = (
+				7C3EA596E2DB60E6ACABE701 /* [CP] Check Pods Manifest.lock */,
+				8423097321E354DA008156DD /* Sources */,
+				8423097421E354DA008156DD /* Frameworks */,
+				8423097521E354DA008156DD /* Resources */,
+				7CF76E89170C95DAD3A8A1B9 /* [CP] Embed Pods Frameworks */,
+				CDBAA4738B46E5F3D8694CAE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = justademo;
+			productName = justademo;
+			productReference = 8423097721E354DA008156DD /* justademo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8423098E21E354DD008156DD /* justademoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842309A621E354DD008156DD /* Build configuration list for PBXNativeTarget "justademoTests" */;
+			buildPhases = (
+				8423098B21E354DD008156DD /* Sources */,
+				8423098C21E354DD008156DD /* Frameworks */,
+				8423098D21E354DD008156DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8423099121E354DD008156DD /* PBXTargetDependency */,
+			);
+			name = justademoTests;
+			productName = justademoTests;
+			productReference = 8423098F21E354DD008156DD /* justademoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8423099921E354DD008156DD /* justademoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842309A921E354DD008156DD /* Build configuration list for PBXNativeTarget "justademoUITests" */;
+			buildPhases = (
+				8423099621E354DD008156DD /* Sources */,
+				8423099721E354DD008156DD /* Frameworks */,
+				8423099821E354DD008156DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8423099C21E354DD008156DD /* PBXTargetDependency */,
+			);
+			name = justademoUITests;
+			productName = justademoUITests;
+			productReference = 8423099A21E354DD008156DD /* justademoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8423096F21E354D9008156DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = allyes;
+				TargetAttributes = {
+					8423097621E354DA008156DD = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					8423098E21E354DD008156DD = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 8423097621E354DA008156DD;
+					};
+					8423099921E354DD008156DD = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 8423097621E354DA008156DD;
+					};
+				};
+			};
+			buildConfigurationList = 8423097221E354D9008156DD /* Build configuration list for PBXProject "justademo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8423096E21E354D9008156DD;
+			productRefGroup = 8423097821E354DA008156DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8423097621E354DA008156DD /* justademo */,
+				8423098E21E354DD008156DD /* justademoTests */,
+				8423099921E354DD008156DD /* justademoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8423097521E354DA008156DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842309B921E3637D008156DD /* test.html in Resources */,
+				8423098721E354DC008156DD /* LaunchScreen.storyboard in Resources */,
+				8423098421E354DC008156DD /* Assets.xcassets in Resources */,
+				8423098221E354DA008156DD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8423098D21E354DD008156DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8423099821E354DD008156DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7C3EA596E2DB60E6ACABE701 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-justademo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CF76E89170C95DAD3A8A1B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-justademo/Pods-justademo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FCFileManager/FCFileManager.framework",
+				"${BUILT_PRODUCTS_DIR}/dsBridge/dsBridge.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCFileManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/dsBridge.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-justademo/Pods-justademo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDBAA4738B46E5F3D8694CAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-justademo/Pods-justademo-resources.sh",
+				"${PODS_ROOT}/SingSoundSDK/singsoundSDK/bundle/SingSound.Bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SingSound.Bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-justademo/Pods-justademo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8423097321E354DA008156DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842309C121E37058008156DD /* UIColor+Addition.m in Sources */,
+				842309B721E3633E008156DD /* JsEchoApi.m in Sources */,
+				8423097F21E354DA008156DD /* ViewController.m in Sources */,
+				842309D521E4AF1E008156DD /* ServiceManager.m in Sources */,
+				8423098A21E354DC008156DD /* main.m in Sources */,
+				8423097C21E354DA008156DD /* AppDelegate.m in Sources */,
+				842309B121E362E3008156DD /* JsApiTest.m in Sources */,
+				842309AE21E3568C008156DD /* WebViewController.m in Sources */,
+				842309B621E3633E008156DD /* JsApiTestSwift.swift in Sources */,
+				842309D221E4551C008156DD /* UIImage+Rotate.m in Sources */,
+				842309CF21E454E8008156DD /* UIImage+Compress.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8423098B21E354DD008156DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8423099421E354DD008156DD /* justademoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8423099621E354DD008156DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8423099F21E354DD008156DD /* justademoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8423099121E354DD008156DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8423097621E354DA008156DD /* justademo */;
+			targetProxy = 8423099021E354DD008156DD /* PBXContainerItemProxy */;
+		};
+		8423099C21E354DD008156DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8423097621E354DA008156DD /* justademo */;
+			targetProxy = 8423099B21E354DD008156DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8423098021E354DA008156DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8423098121E354DA008156DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8423098521E354DC008156DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8423098621E354DC008156DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		842309A121E354DD008156DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		842309A221E354DD008156DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		842309A421E354DD008156DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 618E04FEBCB8F12DE6EF36D4 /* Pods-justademo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WT237WBUX8;
+				INFOPLIST_FILE = justademo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = unknown.justademo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "justademo/justademo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		842309A521E354DD008156DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1F8F1D1F40B4E17EFCD5974 /* Pods-justademo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WT237WBUX8;
+				INFOPLIST_FILE = justademo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = unknown.justademo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "justademo/justademo-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		842309A721E354DD008156DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = justademoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = unknown.justademoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/justademo.app/justademo";
+			};
+			name = Debug;
+		};
+		842309A821E354DD008156DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = justademoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = unknown.justademoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/justademo.app/justademo";
+			};
+			name = Release;
+		};
+		842309AA21E354DD008156DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = justademoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = unknown.justademoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = justademo;
+			};
+			name = Debug;
+		};
+		842309AB21E354DD008156DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = justademoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = unknown.justademoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = justademo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8423097221E354D9008156DD /* Build configuration list for PBXProject "justademo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842309A121E354DD008156DD /* Debug */,
+				842309A221E354DD008156DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842309A321E354DD008156DD /* Build configuration list for PBXNativeTarget "justademo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842309A421E354DD008156DD /* Debug */,
+				842309A521E354DD008156DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842309A621E354DD008156DD /* Build configuration list for PBXNativeTarget "justademoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842309A721E354DD008156DD /* Debug */,
+				842309A821E354DD008156DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842309A921E354DD008156DD /* Build configuration list for PBXNativeTarget "justademoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842309AA21E354DD008156DD /* Debug */,
+				842309AB21E354DD008156DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8423096F21E354D9008156DD /* Project object */;
+}

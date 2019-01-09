@@ -1,0 +1,18 @@
+platform :ios, "8.0"
+
+inhibit_all_warnings!
+use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/aliyun/aliyun-specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://pt.singsound.com:10081/singsound-public/SingSoundSDKCocoaPodRepo.git'
+
+target "justademo" do
+  pod 'dsBridge'
+  pod 'FCFileManager'
+  pod 'AlicloudHTTPDNS', '~> 1.6.11'
+  pod 'SingSoundSDK'
+end
+
+
+
