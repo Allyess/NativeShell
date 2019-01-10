@@ -18,7 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 }
 @property (nonatomic,copy) NSString* URLString;
 @property(nonatomic, strong) DWKWebView *webView;
-
+@property(nonatomic, strong) UIProgressView *progressView;
+- (void)updateProgressViewFrame;
 - (void)hideLeftNavItem;
 
 

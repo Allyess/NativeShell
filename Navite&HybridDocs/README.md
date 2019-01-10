@@ -9,6 +9,8 @@
       - [修改控制器标题](#%E4%BF%AE%E6%94%B9%E6%8E%A7%E5%88%B6%E5%99%A8%E6%A0%87%E9%A2%98)
       - [隐藏导航栏左侧按钮](#%E9%9A%90%E8%97%8F%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%B7%A6%E4%BE%A7%E6%8C%89%E9%92%AE)
       - [显示导航栏左侧按钮](#%E6%98%BE%E7%A4%BA%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%B7%A6%E4%BE%A7%E6%8C%89%E9%92%AE)
+      - [显示导航栏](#%E6%98%BE%E7%A4%BA%E5%AF%BC%E8%88%AA%E6%A0%8F)
+      - [隐藏导航栏](#%E9%9A%90%E8%97%8F%E5%AF%BC%E8%88%AA%E6%A0%8F)
     - [页面跳转](#%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC)
       - [跳转首页](#%E8%B7%B3%E8%BD%AC%E9%A6%96%E9%A1%B5)
       - [消除当前页面](#%E6%B6%88%E9%99%A4%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2)
@@ -128,6 +130,17 @@
     showNavLeftButton()
 ```
 
+#### 显示导航栏
+
+```JS
+    nativeShowNavBar()
+```
+
+#### 隐藏导航栏
+
+```JS
+    nativeHideNavBar()
+```
 
 
 

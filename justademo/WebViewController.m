@@ -16,7 +16,6 @@
 #import "JsApiTest.h"
 
 @interface WebViewController ()<UIGestureRecognizerDelegate>
-@property(nonatomic, strong) UIProgressView *progressView;
 
 @end
 
@@ -30,6 +29,9 @@
         _progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
         
         CGFloat offset = self.navigationController.navigationBar.frame.size.height + [[UIApplication sharedApplication] statusBarFrame].size.height;
+        if (self.navigationController.navigationBar.hidden) {
+            offset = 0;
+        }
         _progressView.frame = CGRectMake(0,offset, [UIScreen mainScreen].bounds.size.width, 5);
         [_progressView setTrackTintColor:zrgba(0,106,255,1)];
         _progressView.progressTintColor = zrgba(0,106,255,1);
@@ -39,6 +41,20 @@
     }
     return _progressView;
 }
+
+- (void)updateProgressViewFrame{
+    CGFloat offset = self.navigationController.navigationBar.frame.size.height + [[UIApplication sharedApplication] statusBarFrame].size.height;
+    if (self.navigationController.navigationBar.hidden) {
+        offset = 0;
+        self.webView.frame=CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
+    }else{
+        self.webView.frame=CGRectMake(0, 25, self.view.bounds.size.width, self.view.bounds.size.height-25);
+    }
+    self.progressView.frame = CGRectMake(0,offset, [UIScreen mainScreen].bounds.size.width, 5);
+    
+
+}
+
 
 //MARK: life cycle
 
@@ -57,6 +73,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
     
     [self cleanCache];
     
@@ -165,7 +182,7 @@
 
 - (void)creatTestWebView{
     CGRect bounds=self.view.bounds;
-    DWKWebView * dwebview=[[DWKWebView alloc] initWithFrame:CGRectMake(0, 25, bounds.size.width, bounds.size.height-25)];
+    DWKWebView * dwebview=[[DWKWebView alloc] initWithFrame:CGRectMake(0, 0, bounds.size.width, bounds.size.height)];
     [self.view addSubview:dwebview];
     self.webView = dwebview;
     

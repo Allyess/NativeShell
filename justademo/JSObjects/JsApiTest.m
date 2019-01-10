@@ -234,6 +234,33 @@
     return @"succeed";
 }
 
+/**
+ 隐藏导航栏
+ */
+- (NSString *)nativeHideNavBar:(id)sender
+{
+    [JsApiTest printDebug:@"nativeHideNavBar" _:sender];
+    
+    self.vc.navigationController.navigationBar.hidden = YES;
+    [self.vc updateProgressViewFrame];
+    return @"succeed";
+}
+
+/**
+ 显示导航栏
+ */
+- (NSString *)nativeShowNavBar:(id)sender
+{
+    [JsApiTest printDebug:@"nativeShowNavBar" _:sender];
+    
+    self.vc.navigationController.navigationBar.hidden = NO;
+    [self.vc updateProgressViewFrame];
+
+    return @"succeed";
+}
+
+
+
 
 
 //MARK: 界面跳转

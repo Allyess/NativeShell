@@ -48,7 +48,8 @@
 <div class="btn" onclick="setNativePersistence()">setNativePersistence</div>
 <div class="btn" onclick="getNativePersistence()">getNativePersistence</div>
 <div class="btn" onclick="pushIndex()">pushIndex</div>
-<div class="btn" onclick="pushIndex()">pushIndex</div>
+<div class="btn" onclick="nativeHideNavBar()">nativeHideNavBar</div>
+<div class="btn" onclick="nativeShowNavBar()">nativeShowNavBar</div>
 <div class="btn" onclick="dissmissCurrentVc()">dissmissCurrentVc</div>
 <div class="btn" onclick="callSyn()">Synchronous call</div>
 <div class="btn" onclick="callAsyn()">Asynchronous call</div>
@@ -139,6 +140,15 @@
     function pushIndex() {
         dsBridge.call("pushIndex", "asd");
     }
+
+function nativeHideNavBar() {
+    dsBridge.call("nativeHideNavBar", "asd");
+}
+
+function nativeShowNavBar() {
+    dsBridge.call("nativeShowNavBar", "asd");
+}
+
 
   function dissmissCurrentVc() {
       dsBridge.call("dissmissCurrentVc", "asd");
