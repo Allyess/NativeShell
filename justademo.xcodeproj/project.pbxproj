@@ -22,7 +22,6 @@
 		842309B921E3637D008156DD /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 842309B821E3637D008156DD /* test.html */; };
 		842309C121E37058008156DD /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 842309C021E37058008156DD /* UIColor+Addition.m */; };
 		842309CF21E454E8008156DD /* UIImage+Compress.m in Sources */ = {isa = PBXBuildFile; fileRef = 842309CE21E454E8008156DD /* UIImage+Compress.m */; };
-		842309D221E4551C008156DD /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842309D021E4551B008156DD /* UIImage+Rotate.m */; };
 		842309D521E4AF1E008156DD /* ServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 842309D421E4AF1D008156DD /* ServiceManager.m */; };
 		AED326A11E8C8B289A50DB3C /* Pods_justademo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13DDCDFC73EDAFB84DE8CDED /* Pods_justademo.framework */; };
 /* End PBXBuildFile section */
@@ -76,8 +75,6 @@
 		842309C021E37058008156DD /* UIColor+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Addition.m"; sourceTree = "<group>"; };
 		842309CD21E454E8008156DD /* UIImage+Compress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Compress.h"; sourceTree = "<group>"; };
 		842309CE21E454E8008156DD /* UIImage+Compress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Compress.m"; sourceTree = "<group>"; };
-		842309D021E4551B008156DD /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
-		842309D121E4551B008156DD /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
 		842309D321E4AF1D008156DD /* ServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceManager.h; sourceTree = "<group>"; };
 		842309D421E4AF1D008156DD /* ServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceManager.m; sourceTree = "<group>"; };
 		C1F8F1D1F40B4E17EFCD5974 /* Pods-justademo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-justademo.release.xcconfig"; path = "Pods/Target Support Files/Pods-justademo/Pods-justademo.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,32 +148,19 @@
 		8423097921E354DA008156DD /* justademo */ = {
 			isa = PBXGroup;
 			children = (
+				842309D921E7426A008156DD /* SupportFiles */,
+				842309D821E74247008156DD /* JSObjects */,
+				842309D721E74232008156DD /* Tools */,
+				842309D621E741FF008156DD /* Categrys */,
 				8423097A21E354DA008156DD /* AppDelegate.h */,
 				8423097B21E354DA008156DD /* AppDelegate.m */,
-				842309D321E4AF1D008156DD /* ServiceManager.h */,
-				842309D421E4AF1D008156DD /* ServiceManager.m */,
+				842309B221E36338008156DD /* justademo-Bridging-Header.h */,
 				8423097D21E354DA008156DD /* ViewController.h */,
 				8423097E21E354DA008156DD /* ViewController.m */,
 				842309AC21E3568C008156DD /* WebViewController.h */,
 				842309AD21E3568C008156DD /* WebViewController.m */,
-				842309AF21E362E2008156DD /* JsApiTest.h */,
-				842309B021E362E3008156DD /* JsApiTest.m */,
-				842309B321E3633B008156DD /* JsApiTestSwift.swift */,
-				842309B421E3633B008156DD /* JsEchoApi.h */,
-				842309B521E3633D008156DD /* JsEchoApi.m */,
-				8423098021E354DA008156DD /* Main.storyboard */,
-				8423098321E354DC008156DD /* Assets.xcassets */,
-				8423098521E354DC008156DD /* LaunchScreen.storyboard */,
-				8423098821E354DC008156DD /* Info.plist */,
-				8423098921E354DC008156DD /* main.m */,
-				842309B221E36338008156DD /* justademo-Bridging-Header.h */,
 				842309B821E3637D008156DD /* test.html */,
-				842309BF21E37057008156DD /* UIColor+Addition.h */,
-				842309C021E37058008156DD /* UIColor+Addition.m */,
-				842309CD21E454E8008156DD /* UIImage+Compress.h */,
-				842309CE21E454E8008156DD /* UIImage+Compress.m */,
-				842309D121E4551B008156DD /* UIImage+Rotate.h */,
-				842309D021E4551B008156DD /* UIImage+Rotate.m */,
+				8423098821E354DC008156DD /* Info.plist */,
 			);
 			path = justademo;
 			sourceTree = "<group>";
@@ -197,6 +181,49 @@
 				842309A021E354DD008156DD /* Info.plist */,
 			);
 			path = justademoUITests;
+			sourceTree = "<group>";
+		};
+		842309D621E741FF008156DD /* Categrys */ = {
+			isa = PBXGroup;
+			children = (
+				842309BF21E37057008156DD /* UIColor+Addition.h */,
+				842309C021E37058008156DD /* UIColor+Addition.m */,
+				842309CD21E454E8008156DD /* UIImage+Compress.h */,
+				842309CE21E454E8008156DD /* UIImage+Compress.m */,
+			);
+			path = Categrys;
+			sourceTree = "<group>";
+		};
+		842309D721E74232008156DD /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				842309D321E4AF1D008156DD /* ServiceManager.h */,
+				842309D421E4AF1D008156DD /* ServiceManager.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		842309D821E74247008156DD /* JSObjects */ = {
+			isa = PBXGroup;
+			children = (
+				842309AF21E362E2008156DD /* JsApiTest.h */,
+				842309B021E362E3008156DD /* JsApiTest.m */,
+				842309B321E3633B008156DD /* JsApiTestSwift.swift */,
+				842309B421E3633B008156DD /* JsEchoApi.h */,
+				842309B521E3633D008156DD /* JsEchoApi.m */,
+			);
+			path = JSObjects;
+			sourceTree = "<group>";
+		};
+		842309D921E7426A008156DD /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8423098021E354DA008156DD /* Main.storyboard */,
+				8423098321E354DC008156DD /* Assets.xcassets */,
+				8423098521E354DC008156DD /* LaunchScreen.storyboard */,
+				8423098921E354DC008156DD /* main.m */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,7 +443,6 @@
 				842309B121E362E3008156DD /* JsApiTest.m in Sources */,
 				842309AE21E3568C008156DD /* WebViewController.m in Sources */,
 				842309B621E3633E008156DD /* JsApiTestSwift.swift in Sources */,
-				842309D221E4551C008156DD /* UIImage+Rotate.m in Sources */,
 				842309CF21E454E8008156DD /* UIImage+Compress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

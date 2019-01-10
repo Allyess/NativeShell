@@ -525,9 +525,11 @@
     [[ServiceManager shareManager]getServiceAddressWithAppkey:@"a410" callback:^(NSString *serviceAddress) {
         NSLog(@"获取到的地址%@",serviceAddress);
         [wself registerEngineWithService:serviceAddress params:params];
+    }];
 #endif
     return @"succeed";
 }
+
 -(void)registerEngineWithService:(NSString *)service params:(NSDictionary *)params
 {
     
@@ -616,9 +618,7 @@
  引擎初始化成功
  */
 - (void)oralEvaluatingInitSuccess{
-    dispatch_sync(dispatch_get_main_queue(), ^{
         [self.vc.webView callHandler:@"oralEvaluatingInitSuccess" arguments:nil completionHandler:nil];
-    });
 }
 
 /**
