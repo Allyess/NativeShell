@@ -23,12 +23,17 @@
     [[ServiceManager shareManager]registerHTTPDNS];
     
     __weak typeof(self)wself = self;
+#ifdef DEBUG
     [[ServiceManager shareManager]getServiceAddressWithAppkey:@"t410" callback:^(NSString *serviceAddress) {
         NSLog(@"获取到的地址%@",serviceAddress);
         [wself registerEngineWithService:serviceAddress];
     }];
+#else
+    [[ServiceManager shareManager]getServiceAddressWithAppkey:@"a410" callback:^(NSString *serviceAddress) {
+        NSLog(@"获取到的地址%@",serviceAddress);
+        [wself registerEngineWithService:serviceAddress];
+#endif
 
-    
     return YES;
 }
 

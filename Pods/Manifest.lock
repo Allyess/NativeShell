@@ -9,12 +9,14 @@ PODS:
     - AlicloudUTDID
   - dsBridge (3.0.6)
   - FCFileManager (1.0.20)
+  - MJExtension (3.0.15.1)
   - SingSoundSDK (0.5.1)
 
 DEPENDENCIES:
   - AlicloudHTTPDNS (~> 1.6.11)
   - dsBridge
   - FCFileManager
+  - MJExtension (= 3.0.15.1)
   - SingSoundSDK
 
 SPEC REPOS:
@@ -26,6 +28,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - dsBridge
     - FCFileManager
+    - MJExtension
   https://pt.singsound.com:10081/singsound-public/SingSoundSDKCocoaPodRepo.git:
     - SingSoundSDK
 
@@ -36,8 +39,9 @@ SPEC CHECKSUMS:
   AlicloudUtils: 8ec4614eb89da8e8d6f338b02fb2150d07fad4a9
   dsBridge: 48b62ee8a411ad601a88d6f6c8cf6cb634b206b7
   FCFileManager: e0f73316e6aa2eb04d2ff4caa75fe7df1ae44270
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   SingSoundSDK: f1c7c572e89dd9c6924c32f645a9ea14caaec15f
 
-PODFILE CHECKSUM: d2ae44970f5c29eabb0c4c05a0becc52fe1f8db6
+PODFILE CHECKSUM: d58e2b1c6dd96a041cd9080bfca1ef557a98c317
 
 COCOAPODS: 1.5.3

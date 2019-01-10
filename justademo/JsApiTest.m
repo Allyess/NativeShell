@@ -14,6 +14,7 @@
 #import "ServiceManager.h"
 
 #import "UIImage+Compress.h"
+#import <MJExtension/MJExtension.h>
 
 #define USER_DEFAULTS [NSUserDefaults standardUserDefaults]
 #define mAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
@@ -512,23 +513,25 @@
  */
 -(NSString *)reinit:(NSDictionary *)params
 {
+    [[ServiceManager shareManager]registerHTTPDNS];
 
     __weak typeof(self)wself = self;
+#ifdef DEBUG
     [[ServiceManager shareManager]getServiceAddressWithAppkey:@"t410" callback:^(NSString *serviceAddress) {
         NSLog(@"获取到的地址%@",serviceAddress);
         [wself registerEngineWithService:serviceAddress params:params];
     }];
+#else
+    [[ServiceManager shareManager]getServiceAddressWithAppkey:@"a410" callback:^(NSString *serviceAddress) {
+        NSLog(@"获取到的地址%@",serviceAddress);
+        [wself registerEngineWithService:serviceAddress params:params];
+#endif
     return @"succeed";
 }
 -(void)registerEngineWithService:(NSString *)service params:(NSDictionary *)params
 {
-    SSOralEvaluatingManagerConfig *config = [[SSOralEvaluatingManagerConfig alloc]init];
-    config.appKey = params[@"appKey"] ? :@"t410";
-    config.secretKey = params[@"secretKey"] ? :@"1a16f31f2611bf32fb7b3fc38f5b2c73";
-    //    config.vad = 1;
-    //    config.frontTime = 1;
-    //    config.backTime = 1;
-    [config setValue:service forKey:@"service"];
+    
+    SSOralEvaluatingManagerConfig *config = [SSOralEvaluatingManagerConfig mj_objectWithKeyValues:params];
     [SSOralEvaluatingManager registerEvaluatingManagerConfig:config];
     [[SSOralEvaluatingManager shareManager]registerEvaluatingType:OralEvaluatingTypeLine];
 }
@@ -552,38 +555,7 @@
  */
 - (NSString *)startRecord:(NSDictionary *)params
 {
-    SSOralEvaluatingConfig *config = [[SSOralEvaluatingConfig alloc]init];
-    NSString *oralType = params[@"oralType"];
-    NSString *openFeed = params[@"openFeed"];
-    NSString *oralContent = params[@"oralContent"];
-//    NSString *audioType = params[@"audioType"];
-//    NSString *sampleRate = params[@"sampleRate"];
-//    NSString *channel = params[@"channel"];
-//    NSString *sampleBytes = params[@"sampleBytes"];
-//    NSString *mixedType = params[@"mixedType"];
-//    NSString *rank = params[@"rank"];
-//    NSString *openCompareAudio = params[@"openCompareAudio"];
-//    NSString *stdAudioUrl = params[@"stdAudioUrl"];
-//    NSString *userId = params[@"userId"];
-//    NSString *precision = params[@"precision"];
-//    NSString *rateScale = params[@"rateScale"];
-//    NSString *typeThres = params[@"typeThres"];
-//    NSString *phonesDic = params[@"phonesDic"];
-//    NSString *pronScale = params[@"pronScale"];
-//    NSString *question = params[@"question"];
-//    NSString *recorderContent = params[@"recorderContent"];
-//    NSString *isOutputPhonogramForSentence = params[@"isOutputPhonogramForSentence"];
-//    NSString *checkPhones = params[@"checkPhones"];
-//    NSString *enableRetry = params[@"enableRetry"];
-//    NSString *isSyllable = params[@"isSyllable"];
-//    NSString *openSymbol = params[@"openSymbol"];
-//    NSString *grade = params[@"grade"];
-//    NSString *recordTimeinterval = params[@"recordTimeinterval"];
-//
-//    NSString *initiativeSetAudio = params[@"initiativeSetAudio"];
-    config.oralType = [oralType integerValue];
-    config.openFeed = [openFeed boolValue];
-    config.oralContent = oralContent;
+    SSOralEvaluatingConfig *config = [SSOralEvaluatingConfig mj_objectWithKeyValues:params];
 
     [[SSOralEvaluatingManager shareManager] startEvaluateOralWithConfig:config];
     return @"succeed";
@@ -644,7 +616,9 @@
  引擎初始化成功
  */
 - (void)oralEvaluatingInitSuccess{
-    [self.vc.webView callHandler:@"oralEvaluatingInitSuccess" arguments:nil completionHandler:nil];
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        [self.vc.webView callHandler:@"oralEvaluatingInitSuccess" arguments:nil completionHandler:nil];
+    });
 }
 
 /**
