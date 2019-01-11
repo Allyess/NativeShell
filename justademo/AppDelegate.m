@@ -19,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 在这里修改启动页时长
+    sleep(1.5);
     
     [[ServiceManager shareManager]registerHTTPDNS];
     

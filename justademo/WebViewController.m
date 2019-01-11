@@ -73,6 +73,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 在这里修改链接路径
+    self.URLString = @"https://yuwenweb.xugaoyang.com/lesson-one/#/";
+    
     self.navigationController.navigationBar.hidden = YES;
     
     [self cleanCache];

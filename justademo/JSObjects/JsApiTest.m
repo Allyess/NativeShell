@@ -15,6 +15,7 @@
 
 #import "UIImage+Compress.h"
 #import <MJExtension/MJExtension.h>
+#import "UIColor+Addition.h"
 
 #define USER_DEFAULTS [NSUserDefaults standardUserDefaults]
 #define mAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
@@ -259,6 +260,21 @@
     return @"succeed";
 }
 
+/**
+ 设置顶部导航条颜色
+ */
+- (NSString *)setProgressBarCloer:(NSDictionary *)params
+{
+    [JsApiTest printDebug:@"setProgressBarCloer" _:params];
+    NSString *trackTintColor = params[@"trackTintColor"];
+    NSString *progressTintColor = params[@"progressTintColor"];
+    self.vc.navigationController.navigationBar.hidden = NO;
+    [self.vc.progressView setTrackTintColor:[UIColor colorWithHexString:trackTintColor]];
+    self.vc.progressView.progressTintColor = [UIColor colorWithHexString:progressTintColor];
+
+    
+    return @"succeed";
+}
 
 
 
