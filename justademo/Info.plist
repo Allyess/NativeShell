@@ -33,8 +33,6 @@
 	<string>点击允许以允许麦克风访问,以便您使用跟读功能</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>需要访问您的相册，以便选择头像照片等</string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
