@@ -11,6 +11,7 @@ PODS:
   - FCFileManager (1.0.20)
   - MJExtension (3.0.15.1)
   - SingSoundSDK (0.5.1)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - AlicloudHTTPDNS (~> 1.6.11)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - FCFileManager
   - MJExtension (= 3.0.15.1)
   - SingSoundSDK
+  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/aliyun/aliyun-specs.git:
@@ -29,6 +31,7 @@ SPEC REPOS:
     - dsBridge
     - FCFileManager
     - MJExtension
+    - SVProgressHUD
   https://pt.singsound.com:10081/singsound-public/SingSoundSDKCocoaPodRepo.git:
     - SingSoundSDK
 
@@ -41,7 +44,8 @@ SPEC CHECKSUMS:
   FCFileManager: e0f73316e6aa2eb04d2ff4caa75fe7df1ae44270
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   SingSoundSDK: f1c7c572e89dd9c6924c32f645a9ea14caaec15f
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: d58e2b1c6dd96a041cd9080bfca1ef557a98c317
+PODFILE CHECKSUM: ea88eeedf32380fbf6cc9989ca100acb5aa66d0a
 
 COCOAPODS: 1.5.3

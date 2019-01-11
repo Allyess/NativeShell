@@ -14,6 +14,7 @@
 #import "JsEchoApi.h"
 #import "justademo-Swift.h"
 #import "JsApiTest.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface WebViewController ()<UIGestureRecognizerDelegate>
 
@@ -33,8 +34,8 @@
             offset = 0;
         }
         _progressView.frame = CGRectMake(0,offset, [UIScreen mainScreen].bounds.size.width, 5);
-        [_progressView setTrackTintColor:zrgba(0,106,255,1)];
-        _progressView.progressTintColor = zrgba(0,106,255,1);
+        [_progressView setTrackTintColor:[UIColor clearColor]];
+        _progressView.progressTintColor = [UIColor clearColor];
         
         [self.view addSubview:_progressView];
         [self.view bringSubviewToFront:_progressView];
@@ -74,6 +75,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 在这里修改链接路径
+    [SVProgressHUD show];
     self.URLString = @"https://yuwenweb.xugaoyang.com/lesson-one/#/";
     
     self.navigationController.navigationBar.hidden = YES;
@@ -385,7 +387,11 @@
 }
 
 
-
+//MARK:WKWebView NavigationDelegate
+- (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
+    NSLog(@"加载失败,失败原因:%@",[error description]);
+    [SVProgressHUD dismiss];
+}
 //MARK:kvo 监听进度
 -(void)observeValueForKeyPath:(NSString *)keyPath
                      ofObject:(id)object
@@ -404,6 +410,7 @@
             } completion:^(BOOL finished) {
                 [self.progressView setProgress:0.0f animated:NO];
             }];
+            [SVProgressHUD dismiss];
         }
     }else{
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
