@@ -26,6 +26,7 @@
       - [开始播放录音](#%E5%BC%80%E5%A7%8B%E6%92%AD%E6%94%BE%E5%BD%95%E9%9F%B3)
       - [停止播放录音](#%E5%81%9C%E6%AD%A2%E6%92%AD%E6%94%BE%E5%BD%95%E9%9F%B3)
       - [获取录音路径](#%E8%8E%B7%E5%8F%96%E5%BD%95%E9%9F%B3%E8%B7%AF%E5%BE%84)
+      - [获取录音base64字符串](#%E8%8E%B7%E5%8F%96%E5%BD%95%E9%9F%B3base64%E5%AD%97%E7%AC%A6%E4%B8%B2)
     - [Cookies & Persistence](#cookies--persistence)
       - [设置客户端缓存](#%E8%AE%BE%E7%BD%AE%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%BC%93%E5%AD%98)
       - [读取客户端缓存](#%E8%AF%BB%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%BC%93%E5%AD%98)
@@ -628,6 +629,20 @@ dsBridge.call("stopPlayRecord")
         console.log(dsBridge.call("getRecordPath", {"tokenId":xxx}));
 
 // retuen path
+```
+
+req：
+
+| name | type | des | required | remark |
+| --- | --- | --- | --- | --- |
+| tokenId  | string | tokenId | 1 | |
+
+####  获取录音base64字符串
+
+
+```JS
+        console.log(dsBridge.call("getRecordBase64StringData", {"tokenId":xxx}));
+// retuen base64String
 ```
 
 req：

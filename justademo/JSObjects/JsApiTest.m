@@ -639,7 +639,7 @@
 }
 
 /**
- 获取录音base64文件
+ 获取录音base64字符串
  
  @param params params description
  */
