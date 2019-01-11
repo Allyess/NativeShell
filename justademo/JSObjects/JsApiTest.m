@@ -638,6 +638,27 @@
     return path;
 }
 
+/**
+ 获取录音base64文件
+ 
+ @param params params description
+ */
+- (NSString *)getRecordBase64StringData:(NSDictionary *)params
+{
+    NSString *tokenId = params[@"tokenId"];
+    
+    NSString *path = [SSOralEvaluatingManager recordPathWithTokenId:tokenId];
+    
+    
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    
+    NSString *base64String = [data base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+    
+
+    return base64String;
+}
+
+
 
 //MARK: OralEvaluatingManagerDelegate
 

@@ -36,6 +36,7 @@
     <div class="btn" onclick="startPlayRecord()">startPlayRecord</div>
     <div class="btn" onclick="stopPlayRecord()">stopPlayRecord</div>
     <div class="btn" onclick="getRecordPath()">getRecordPath</div>
+    <div class="btn" onclick="getRecordBase64StringData()">getRecordBase64StringData</div>
 <div class="btn" onclick="openURL()">openURL</div>
 <div class="btn" onclick="callPhone()">callPhone</div>
 <div class="btn" onclick="stopRecord()">stopRecord</div>
@@ -95,7 +96,11 @@
     function getRecordPath() {
         console.log(dsBridge.call("getRecordPath", {"tokenId":xxx}));
     }
-    
+
+    function getRecordBase64StringData() {
+        console.log(dsBridge.call("getRecordBase64StringData", {"tokenId":xxx}));
+    }
+
     function openURL() {
         dsBridge.call("openURL", {"Url":"https://www.baidu.com"});
     }
