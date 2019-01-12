@@ -589,6 +589,8 @@
 - (NSString *)stopRecord:(NSDictionary *)params
 {
     [[SSOralEvaluatingManager shareManager] stopEvaluate];
+    
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     return @"succeed";
 }
 
@@ -682,7 +684,10 @@
  引擎初始化成功
  */
 - (void)oralEvaluatingInitSuccess{
-        [self.vc.webView callHandler:@"oralEvaluatingInitSuccess" arguments:nil completionHandler:nil];
+    dispatch_sync(dispatch_get_main_queue(), ^{
+     [self.vc.webView callHandler:@"oralEvaluatingInitSuccess" arguments:nil completionHandler:nil];
+    });
+    
 }
 
 /**
