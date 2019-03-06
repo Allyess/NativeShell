@@ -76,7 +76,7 @@
     [super viewDidLoad];
     // 在这里修改链接路径
     [SVProgressHUD show];
-    self.URLString = @"https://yuwenweb.xugaoyang.com/lesson-one/#/";
+    self.URLString = @"https://www.yu-wen.com/lesson-one/#/";
     
     self.navigationController.navigationBar.hidden = YES;
     
